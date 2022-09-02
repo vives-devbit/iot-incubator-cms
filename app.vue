@@ -17,6 +17,7 @@
     </v-main>
 
     <v-footer
+      app
       bottom
       class="text-center d-flex flex-column"
     >
