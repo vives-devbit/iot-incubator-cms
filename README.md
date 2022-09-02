@@ -51,3 +51,12 @@ Why custom setup from scratch and not use template of Netlify? Because I wanted 
  * Identify
  * External Providers: github
  * Github gateway
+ * Only enable registration by invite
+
+## User Registration
+
+Invite users via Netlify => Identify
+
+User than get's invitation link. For the moment we need to change the link to take the `/admin` part into account. So `https://precious-palmier-eb57a6.netlify.app/#invite_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` becomes `https://precious-palmier-eb57a6.netlify.app/admin/#invite_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`.
+
+The user should then be presented with login.
