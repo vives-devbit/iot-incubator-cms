@@ -52,6 +52,7 @@ Why custom setup from scratch and not use template of Netlify? Because I wanted 
  * External Providers: github
  * Github gateway
  * Only enable registration by invite
+4. Setup Vuetify with Nuxt 3: [https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html](https://codybontecou.com/how-to-use-vuetify-with-nuxt-3.html)
 
 ## User Registration
 
