@@ -1,5 +1,5 @@
 ---
-title: Test Project Uno
-short_description: This is a really short description of the project.
-cover: https://atmosphere.copernicus.eu/sites/default/files/styles/hero_image_extra_large_2x/public/2019-04/wolfgang-hasselmann-1143505-unsplash_0.jpg?itok=PM9XjU6L
+title: Devices for Ubiquitous Soil and Temperature measurements
+short_description: Until now, little is known in Flanders about the soil quality of urban tree mirrors. In the professional field, people often talk about undersized growth spaces and these are intuitively empirically visible, but there are no substantiated objective criteria to validate this statement. There is no benchmark against which we can test urban soils. This is necessary to convince the policy to invest more in quality of habitat, especially with the current climate problem, in which the vulnerability of urban forests due to drought, heat and flooding is clearly visible.
+cover: /images/download.jpeg
 ---

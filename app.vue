@@ -5,8 +5,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn flat size="large" to="/research" prepend-icon="mdi-magnify">Research</v-btn>
-      <v-btn flat size="large" to="/students/projects" prepend-icon="mdi-school">Student Projects</v-btn>
+      <v-btn flat size="large" to="/projects" prepend-icon="mdi-magnify">Projects</v-btn>
       <v-btn flat size="large" to="/ourteam" prepend-icon="mdi-account-group">Our Team</v-btn>
       <v-btn flat size="large" prepend-icon="mdi-human-greeting-proximity">Contact Us</v-btn>
 
