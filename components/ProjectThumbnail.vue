@@ -1,6 +1,6 @@
 <template>
   <v-card :elevation="12" class="d-flex flex-column rounded-lg ma-5 bg-background text-left" hover>    <!-- to="/research/project" -->
-    <v-img :src="`${project.coverImage}`" class="rounded-t-lg" max-height="150" cover></v-img>
+    <v-img :src="`${project.coverImage}`" class="rounded-t-lg" height="150" cover></v-img>
 
     <v-card-title>
       {{ project.title }}
@@ -15,7 +15,8 @@
     </v-card-text>
 
     <v-card-text class="text-medium-emphasis text-caption d-flex align-end">
-      {{ '#' + project.tags.join(', #') }}
+      {{ project.tags }}
+      <!-- {{ '#' + project.tags.join(', #') }} -->
     </v-card-text>
   </v-card>
 </template>
