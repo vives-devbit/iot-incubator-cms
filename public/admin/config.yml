@@ -21,5 +21,5 @@ collections:
       - { label: 'Short Title', name: 'shortTitle', widget: 'string', required: false }
       - { label: 'Summary', name: 'summary', widget: 'string', required: true }
       - { label: 'Cover Image', name: 'coverImage', widget: 'image', required: true, allow_multiple: false }
-      - { label: 'Type', name: 'type', widget: 'select', required: true, options: ["Student", "PWO", "Tetra"] }
+      - { label: 'Type', name: 'type', widget: 'select', required: true, options: ["Student", "PWO", "TETRA"] }
       - { label: 'Tags', name: 'tags', widget: 'list', required: true, min: 1 }

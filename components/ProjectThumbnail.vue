@@ -1,6 +1,6 @@
 <template>
   <v-card :elevation="12" class="d-flex flex-column rounded-lg ma-5 bg-background text-left" hover>    <!-- to="/research/project" -->
-    <v-img :src="`${project.cover}`" class="rounded-t-lg" max-height="150" cover></v-img>
+    <v-img :src="`${project.coverImage}`" class="rounded-t-lg" max-height="150" cover></v-img>
 
     <v-card-title>
       {{ project.title }}
@@ -11,12 +11,11 @@
     </v-card-subtitle> -->
 
     <v-card-text>
-      {{ ellips_trim(project.short_description) }}
+      {{ ellips_trim(project.summary) }}
     </v-card-text>
 
     <v-card-text class="text-medium-emphasis text-caption d-flex align-end">
-      <!-- {{ '#' + project.tags.join(', #') }} -->
-      Here come the tags ....
+      {{ '#' + project.tags.join(', #') }}
     </v-card-text>
   </v-card>
 </template>
