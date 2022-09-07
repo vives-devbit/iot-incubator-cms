@@ -25,17 +25,9 @@
         </v-col>
       </v-row>
 
-      <v-row justify="start" dense v-if="!pending">
-        <v-col cols="12" sm="6" md="3" v-for="project in data" :key="project._id">
-          <project-thumbnail :project="project" />
-        </v-col>
-      </v-row>
-
-      <v-row dense v-else>
-        <v-col cols="12">
-          <p>Please wait while the data is being loaded ...</p>
-        </v-col>
-      </v-row>
+      <v-container class="px-8 d-flex flex-wrap justify-center" v-if="!pending">
+        <project-thumbnail v-for="project in data" :key="project._id" :project="project" max-width="320" />
+      </v-container>
 
     </v-col>
   </v-row>

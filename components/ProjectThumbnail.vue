@@ -1,22 +1,21 @@
 <template>
   <v-card :elevation="12" class="d-flex flex-column rounded-lg ma-5 bg-background text-left" hover>    <!-- to="/research/project" -->
-    <v-img :src="`${project.coverImage}`" class="rounded-t-lg" height="150" cover></v-img>
+    <v-img :src="`${project.coverImage}`" class="rounded-t-lg" height="150" max-height="150" cover></v-img>
 
     <v-card-title>
       {{ project.title }}
     </v-card-title>
 
-    <!-- <v-card-subtitle class="text-caption" v-if="!concise" >
-      {{ project.startyear }} - {{ project.endyear }}
-    </v-card-subtitle> -->
+    <v-card-subtitle class="text-caption">
+      {{ project.year }}
+    </v-card-subtitle>
 
     <v-card-text>
       {{ ellips_trim(project.summary) }}
     </v-card-text>
 
     <v-card-text class="text-medium-emphasis text-caption d-flex align-end">
-      {{ project.tags }}
-      <!-- {{ '#' + project.tags.join(', #') }} -->
+      {{ '#' + project.tags.join(', #') }}
     </v-card-text>
   </v-card>
 </template>

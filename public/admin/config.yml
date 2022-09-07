@@ -13,7 +13,7 @@ collections:
     folder: 'content/projects'
     format: 'frontmatter'
     create: true           # Allow users to create new documents in this collection
-    slug: '{{slug}}'       # Filename template
+    slug: '{{year}}-{{slug}}'       # Filename template
     editor:
       preview: false
     fields:     # The fields for each document, usually in front matter
@@ -23,3 +23,4 @@ collections:
       - { label: 'Cover Image', name: 'coverImage', widget: 'image', required: true, allow_multiple: false }
       - { label: 'Type', name: 'type', widget: 'select', required: true, options: ["Student", "PWO", "TETRA"] }
       - { label: 'Tags', name: 'tags', widget: 'list', required: true, min: 1, hint: "Provide comma separated list of tags" }
+      - { label: 'Year', name: 'year', widget: 'date', required: true, format: "YYYY" }
