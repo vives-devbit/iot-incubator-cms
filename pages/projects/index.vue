@@ -1,8 +1,6 @@
 <script setup>
   const { data, pending } = await useAsyncData('projects', () => queryContent('/projects/').find())
-  console.log(data)
 </script>
-
 
 <template>
 

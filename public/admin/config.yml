@@ -24,3 +24,21 @@ collections:
       - { label: 'Type', name: 'type', widget: 'select', required: true, options: ["Student", "PWO", "TETRA"] }
       - { label: 'Tags', name: 'tags', widget: 'list', required: true, min: 1, hint: "Provide comma separated list of tags" }
       - { label: 'Year', name: 'year', widget: 'date', required: true, format: "YYYY" }
+  - name: 'people'       # Used in routes, e.g., /admin/collections/people
+    label: 'People'      # Used in the UI
+    folder: 'content/people'
+    format: 'frontmatter'
+    create: true           # Allow users to create new documents in this collection
+    slug: '{{slug}}'       # Filename template
+    editor:
+      preview: false
+    fields:     # The fields for each document, usually in front matter
+      - { label: 'Name', name: 'name', widget: 'string', required: true }
+      - { label: 'Image', name: 'image', widget: 'image', required: true }
+      - { label: 'E-Mail', name: 'email', widget: 'string', required: true }
+      - { label: 'Expertise', name: 'expertise', widget: 'list', required: true, min: 1, hint: "Provide comma separated list of tags" }
+      - { label: 'Bio', name: 'bio', widget: 'string', required: true }
+      - { label: 'Role', name: 'role', widget: 'select', multiple: true, required: true, options: ["Researcher in Electronics-ICT", "Lector in Electronics-ICT", "Researcher in Internet of Things", "Lector in Internet of Things"] }
+      - { label: 'LinkedIn', name: 'linkedin', widget: 'string' }
+      - { label: 'Facebook', name: 'facebook', widget: 'string' }
+      - { label: 'Instagram', name: 'instagram', widget: 'string' }

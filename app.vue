@@ -6,8 +6,7 @@
       <v-spacer></v-spacer>
 
       <v-btn flat size="large" to="/projects" prepend-icon="mdi-magnify">Projects</v-btn>
-      <v-btn flat size="large" to="/ourteam" prepend-icon="mdi-account-group">Our Team</v-btn>
-      <v-btn flat size="large" prepend-icon="mdi-human-greeting-proximity">Contact Us</v-btn>
+      <v-btn flat size="large" to="/people" prepend-icon="mdi-account-group">Our Team</v-btn>
 
     </v-app-bar>
 
@@ -66,7 +65,7 @@
           <v-card tile flat>
             <v-card-title class="justify-center">Placeholder</v-card-title>
             <v-card-text>
-              Just a placeholder for something, who knows what?
+              Just a placeholder for something, who knows what? Maybe contact information ?
             </v-card-text>
           </v-card>
         </v-col>
