@@ -7,7 +7,7 @@
     </v-card-title>
 
     <v-card-subtitle class="text-caption">
-      {{ project.year }}
+      {{ project.year }} - {{ project.type }} project
     </v-card-subtitle>
 
     <v-card-text>
@@ -48,3 +48,12 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+.v-card-title {
+  text-overflow: initial;
+  word-break: normal;
+  white-space: normal;
+  word-wrap: normal;
+}
+</style>
