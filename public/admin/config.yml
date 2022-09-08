@@ -13,7 +13,7 @@ collections:
     folder: 'content/projects'
     format: 'frontmatter'
     create: true           # Allow users to create new documents in this collection
-    slug: '{{year}}-{{slug}}'       # Filename template
+    slug: '{{fields.year}}-{{slug}}'       # Filename template - {{slug}}: a url-safe version of the title field (or identifier field) for the file
     editor:
       preview: false
     fields:     # The fields for each document, usually in front matter
@@ -24,12 +24,14 @@ collections:
       - { label: 'Type', name: 'type', widget: 'select', required: true, options: ["Student", "PWO", "TETRA"] }
       - { label: 'Tags', name: 'tags', widget: 'list', required: true, min: 1, hint: "Provide comma separated list of tags" }
       - { label: 'Year', name: 'year', widget: 'date', required: true, format: "YYYY" }
+    sortable_fields: ['commit_date', 'title', 'year', 'type']
   - name: 'people'       # Used in routes, e.g., /admin/collections/people
     label: 'People'      # Used in the UI
     folder: 'content/people'
     format: 'frontmatter'
     create: true           # Allow users to create new documents in this collection
-    slug: '{{slug}}'       # Filename template
+    identifier_field: name    # Choose another fields as identifier ()
+    slug: '{{slug}}'       # Filename template - {{slug}}: a url-safe version of the title field (or identifier field) for the file
     editor:
       preview: false
     fields:     # The fields for each document, usually in front matter
@@ -38,7 +40,8 @@ collections:
       - { label: 'E-Mail', name: 'email', widget: 'string', required: true }
       - { label: 'Expertise', name: 'expertise', widget: 'list', required: true, min: 1, hint: "Provide comma separated list of tags" }
       - { label: 'Bio', name: 'bio', widget: 'string', required: true }
-      - { label: 'Role', name: 'role', widget: 'select', multiple: true, required: true, options: ["Researcher in Electronics-ICT", "Lector in Electronics-ICT", "Researcher in Internet of Things", "Lector in Internet of Things"] }
+      - { label: 'Role', name: 'role', widget: 'select', multiple: true, required: true, options: ["Researcher", "Lector in Electronics-ICT", "Lector in Internet of Things", "Head of Education Bachelor Electronics-ICT"] }
       - { label: 'LinkedIn', name: 'linkedin', widget: 'string', required: false }
       - { label: 'Facebook', name: 'facebook', widget: 'string', required: false }
       - { label: 'Instagram', name: 'instagram', widget: 'string', required: false }
+    sortable_fields: ['name', 'role']
