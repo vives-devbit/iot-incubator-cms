@@ -40,7 +40,6 @@ collections:
       - { label: 'E-Mail', name: 'email', widget: 'string', required: true }
       - { label: 'Expertise', name: 'expertise', widget: 'list', required: true, min: 1, hint: "Provide comma separated list of tags" }
       - { label: 'Bio', name: 'bio', widget: 'string', required: true }
-      - { label: 'Role', name: 'role', widget: 'select', multiple: true, required: true, options: ["Researcher", "Lector in Electronics-ICT", "Lector in Internet of Things", "Head of Education Bachelor Electronics-ICT"] }
       - { label: 'LinkedIn', name: 'linkedin', widget: 'string', required: false }
       - { label: 'Facebook', name: 'facebook', widget: 'string', required: false }
       - { label: 'Instagram', name: 'instagram', widget: 'string', required: false }

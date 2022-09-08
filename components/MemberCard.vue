@@ -12,11 +12,15 @@
             <v-card-title>
               {{ member.name }}
             </v-card-title>
-            <v-card-text class="text-center">
+            <v-card-text class="d-flex text-center align-center">
               {{ member.bio }}
             </v-card-text>
 
-            <v-container class="d-flex flex-row justify-space-around">
+            <v-container class="text-medium-emphasis text-caption text-center text-white">
+              #{{ member.expertise.join(', #') }}
+            </v-container>
+
+            <v-container class="d-flex justify-space-around">
 
               <v-btn
                 icon flat v-if="member.linkedin"
@@ -30,7 +34,7 @@
 
               <v-btn
                 icon flat v-if="member.email"
-                :href="member.email"
+                :href="`mailto:${member.email}`"
                 target="_blank"
                 color="transparent"
               >
@@ -38,10 +42,6 @@
               </v-btn>
 
             </v-container>
-
-            <v-card-text class="text-medium-emphasis text-caption d-flex align-end">
-              {{ member.expertise.join(' | ') }}
-            </v-card-text>
           </v-card>
         </v-expand-transition>
       </v-img>
@@ -72,10 +72,10 @@ export default defineComponent({
 
 
 <style scoped>
-  .v-card-title, .v-card-subtitle {
-    text-overflow: initial;
-    word-break: normal;
-    white-space: normal;
-    word-wrap: normal;
-  }
-  </style>
+.v-card-title, .v-card-subtitle {
+  text-overflow: initial;
+  word-break: normal;
+  white-space: normal;
+  word-wrap: normal;
+}
+</style>
