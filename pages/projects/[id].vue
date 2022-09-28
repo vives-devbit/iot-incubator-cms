@@ -1,14 +1,13 @@
 <script setup>
+  console.log("Running the setup of [id]")
   const { path } = useRoute();
-  const { data, pending } = await useAsyncData('content-${path}', () => queryContent().where({ _path: path }).findOne())
+  console.log()
+  const { data, pending } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne())
  
   console.log(path);
   console.log(pending)
   console.log(data)
 
-
-
-  
   // const { data } = await useAsyncData(`content-${path}`, async () => {
   
   //   // fetch document where the document path matches with the current route
@@ -51,11 +50,20 @@
     <v-img :src="data.coverImage" max-height="200" cover/>
     <v-container>
       <v-row>
-        <v-col cols="8" offset="1">
+        <v-col cols="12" lg="8" offset-xl="2" xl="6">
           <ContentDoc />
         </v-col>
-        <v-col cols="3">
-          People
+        <v-col cols="12" lg="4" xl="4">
+          <hr class="d-lg-none">
+          <v-card flat class="bg-transparent mb-4">
+            <v-card-title>Need more Info?</v-card-title>
+            <v-card-text>Feel free to contact one of our colleague's involved in this project</v-card-text>
+          </v-card>
+          <v-container class="ma-0 pa-0 mt-2 d-flex flex-wrap flex-lg-column justify-center">
+            <SmallContactCard max-width="400" min-width="300" class="ma-2" />
+            <SmallContactCard max-width="400" min-width="300" class="ma-2" />
+            <SmallContactCard max-width="400" min-width="300" class="ma-2" />
+          </v-container>
         </v-col>
       </v-row>
     </v-container>  

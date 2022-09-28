@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar>
-      <v-app-bar-title class="font-weight-bold">Internet of Things Incubator</v-app-bar-title>
+      <v-app-bar-title class="font-weight-bold">IoT-LAB</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
