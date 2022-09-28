@@ -1,5 +1,5 @@
 <template>
-  <v-card :elevation="12" class="d-flex flex-column rounded-lg ma-5 bg-background text-left" hover>    <!-- to="/research/project" -->
+  <v-card :elevation="12" class="d-flex flex-column rounded-lg ma-5 bg-background text-left" hover :to="project._path">
     <v-img :src="`${project.coverImage}`" class="rounded-t-lg" height="150" max-height="150" cover></v-img>
 
     <v-card-title>
